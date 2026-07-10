@@ -189,6 +189,15 @@ export function GooglePlayIcon(props: IconProps) {
   );
 }
 
+export function KeyIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="8" cy="15" r="4" />
+      <path d="M11 12 20 3M17 6l2 2M14 9l2 2" />
+    </svg>
+  );
+}
+
 export function SettingsIcon(props: IconProps) {
   return (
     <svg {...base(props)}>

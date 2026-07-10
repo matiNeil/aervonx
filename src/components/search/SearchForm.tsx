@@ -8,18 +8,25 @@ import { placeSuggestions } from "@/lib/data/places";
 import {
   BedIcon,
   CarIcon,
+  KeyIcon,
   PackageIcon,
   PlaneIcon,
   SearchIcon,
 } from "@/components/icons";
 
-export type SearchTab = "flights" | "stays" | "packages" | "transfers";
+export type SearchTab =
+  | "flights"
+  | "stays"
+  | "packages"
+  | "transfers"
+  | "car-rentals";
 
 const tabs: { key: SearchTab; label: string; icon: ReactNode }[] = [
   { key: "flights", label: "Flights", icon: <PlaneIcon className="h-4 w-4" /> },
   { key: "stays", label: "Stays", icon: <BedIcon className="h-4 w-4" /> },
   { key: "packages", label: "Packages", icon: <PackageIcon className="h-4 w-4" /> },
   { key: "transfers", label: "Transfers", icon: <CarIcon className="h-4 w-4" /> },
+  { key: "car-rentals", label: "Car Rentals", icon: <KeyIcon className="h-4 w-4" /> },
 ];
 
 const inputClass =
@@ -79,11 +86,17 @@ export function SearchForm({
       add("depart", depart);
       add("adults", adults);
       router.push(`/packages?${params.toString()}`);
-    } else {
+    } else if (tab === "transfers") {
       add("destination", destination);
       add("depart", depart);
       add("adults", adults);
       router.push(`/transfers?${params.toString()}`);
+    } else {
+      add("destination", destination);
+      add("depart", depart);
+      add("return", ret);
+      add("adults", adults);
+      router.push(`/car-rentals?${params.toString()}`);
     }
   }
 
@@ -227,6 +240,31 @@ export function SearchForm({
                 <select id="t-adults" className={inputClass} value={adults} onChange={(e) => setAdults(e.target.value)}>
                   {travellerOptions().map((n) => (
                     <option key={n} value={n}>{n} passenger{n > 1 ? "s" : ""}</option>
+                  ))}
+                </select>
+              </div>
+            </>
+          ) : null}
+
+          {tab === "car-rentals" ? (
+            <>
+              <div className="col-span-2 md:col-span-4">
+                <label className={labelClass} htmlFor="c-dest">Pick-up location</label>
+                <input id="c-dest" list={placesId} className={inputClass} placeholder="City or airport" value={destination} onChange={(e) => setDestination(e.target.value)} />
+              </div>
+              <div className="col-span-1 md:col-span-3">
+                <label className={labelClass} htmlFor="c-pickup">Pick-up date</label>
+                <input id="c-pickup" type="date" className={inputClass} value={depart} onChange={(e) => setDepart(e.target.value)} />
+              </div>
+              <div className="col-span-1 md:col-span-3">
+                <label className={labelClass} htmlFor="c-dropoff">Drop-off date</label>
+                <input id="c-dropoff" type="date" className={inputClass} value={ret} onChange={(e) => setRet(e.target.value)} />
+              </div>
+              <div className="col-span-2 md:col-span-2">
+                <label className={labelClass} htmlFor="c-drivers">Drivers</label>
+                <select id="c-drivers" className={inputClass} value={adults} onChange={(e) => setAdults(e.target.value)}>
+                  {travellerOptions().map((n) => (
+                    <option key={n} value={n}>{n} driver{n > 1 ? "s" : ""}</option>
                   ))}
                 </select>
               </div>

@@ -8,6 +8,7 @@
  * component needs to change when that happens.
  */
 import type {
+  CarRental,
   FlightOffer,
   HolidayPackage,
   SearchQuery,
@@ -18,6 +19,7 @@ import { flights } from "@/lib/data/flights";
 import { stays } from "@/lib/data/stays";
 import { packages } from "@/lib/data/packages";
 import { transfers } from "@/lib/data/transfers";
+import { carRentals } from "@/lib/data/car-rentals";
 import { findAirport } from "@/lib/data/airports";
 
 export interface TravelProvider {
@@ -26,6 +28,7 @@ export interface TravelProvider {
   searchStays(query: SearchQuery): Promise<Stay[]>;
   searchPackages(query: SearchQuery): Promise<HolidayPackage[]>;
   searchTransfers(query: SearchQuery): Promise<Transfer[]>;
+  searchCarRentals(query: SearchQuery): Promise<CarRental[]>;
 }
 
 /** Resolve a free-text place query to a comparable city name (lowercase). */
@@ -93,6 +96,20 @@ export const mockProvider: TravelProvider = {
       results = filtered.length ? filtered : transfers;
     }
     return [...results].sort((a, b) => a.price - b.price);
+  },
+
+  async searchCarRentals(query) {
+    const needle = toCity(query.destination ?? query.origin);
+    let results = carRentals;
+    if (needle) {
+      const filtered = carRentals.filter(
+        (c) =>
+          c.city.toLowerCase().includes(needle) ||
+          c.pickupLocation.toLowerCase().includes(needle),
+      );
+      results = filtered.length ? filtered : carRentals;
+    }
+    return [...results].sort((a, b) => a.pricePerDay - b.pricePerDay);
   },
 };
 

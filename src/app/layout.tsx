@@ -52,6 +52,7 @@ export const metadata: Metadata = {
     "hotels",
     "holiday packages",
     "airport transfers",
+    "car rentals",
     "AervonX",
   ],
   openGraph: {

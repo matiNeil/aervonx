@@ -123,6 +123,26 @@ export interface Transfer {
   deepLink: string;
 }
 
+export type CarClass = "Economy" | "Compact" | "SUV" | "Luxury" | "Van";
+
+export interface CarRental {
+  id: string;
+  company: string;
+  model: string;
+  carClass: CarClass;
+  city: string;
+  country: string;
+  /** Pickup point, typically an airport or city location. */
+  pickupLocation: string;
+  seats: number;
+  bags: number;
+  transmission: "Automatic" | "Manual";
+  pricePerDay: number;
+  currency: string;
+  partner: string;
+  deepLink: string;
+}
+
 export type TripType = "round" | "oneway";
 
 /** Normalised query parsed from URL search params for any vertical. */

@@ -10,7 +10,12 @@
  */
 import { siteConfig } from "@/config/site";
 
-export type PartnerKey = "booking" | "skyscanner" | "travelpayouts" | "generic";
+export type PartnerKey =
+  | "booking"
+  | "skyscanner"
+  | "travelpayouts"
+  | "rentalcars"
+  | "generic";
 
 export interface GoLinkOptions {
   partner: PartnerKey;
@@ -54,6 +59,7 @@ export function applyAffiliateMarker(
       break;
     case "skyscanner":
     case "travelpayouts":
+    case "rentalcars":
       url.searchParams.set("marker", affiliate.travelpayoutsMarker);
       break;
     default:

@@ -25,12 +25,13 @@ export const siteConfig = {
     email: "support@aervonx.com",
   },
   poweredBy: "ForgeStackX",
-  /** Primary navigation — the four booking verticals. */
+  /** Primary navigation — the five booking verticals. */
   nav: [
     { label: "Flights", href: "/flights", description: "Compare fares from 100s of airlines" },
     { label: "Accommodation", href: "/accommodation", description: "Hotels, villas & apartments" },
     { label: "Holiday Packages", href: "/packages", description: "Flight + hotel bundles" },
     { label: "Airport Transfers", href: "/transfers", description: "Private & shared rides" },
+    { label: "Car Rentals", href: "/car-rentals", description: "Self-drive, economy to luxury" },
   ] satisfies NavItem[],
   /**
    * Affiliate markers/IDs appended to outbound partner links by the `/go`
