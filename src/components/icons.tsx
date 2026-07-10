@@ -169,6 +169,26 @@ export function TagIcon(props: IconProps) {
   );
 }
 
+export function AppleIcon(props: IconProps) {
+  return (
+    <svg {...base({ fill: "currentColor", stroke: "none", ...props })}>
+      <path d="M16.7 12.7c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.9-.8-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.8 2.3 1.1 0 1.5-.7 2.9-.7s1.7.7 2.9.7c1.2 0 1.9-1.1 2.7-2.2.8-1.2 1.1-2.4 1.1-2.5-.1 0-2.4-.9-2.4-3.7z" />
+      <path d="M14.4 5.9c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.7-1.3z" />
+    </svg>
+  );
+}
+
+export function GooglePlayIcon(props: IconProps) {
+  return (
+    <svg {...base({ fill: "currentColor", stroke: "none", ...props })}>
+      <path d="M4.5 3.5c-.3.3-.5.7-.5 1.2v14.6c0 .5.2.9.5 1.2l.1.1L13 12.2v-.4L4.6 3.4z" />
+      <path d="M15.9 15.1 13 12.2v-.4l2.9-2.9 6.5 3.7c.9.5.9 1.4 0 1.9z" />
+      <path d="M4.6 20.6c-.1-.1-.1-.2 0 0L13 12.2l2.9 2.9L4.7 20.7c-.1 0-.1-.1-.1-.1z" />
+      <path d="M4.6 3.4 13 11.8l2.9-2.9L4.7 3.3c-.1 0-.1 0-.1.1z" />
+    </svg>
+  );
+}
+
 export function SettingsIcon(props: IconProps) {
   return (
     <svg {...base(props)}>

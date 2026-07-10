@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Logo } from "@/components/layout/Logo";
+import { AppBadges } from "@/components/layout/AppBadges";
 import { MailIcon } from "@/components/icons";
 
 const companyLinks = [
@@ -20,6 +21,12 @@ export function Footer() {
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
             {siteConfig.description}
           </p>
+          <div className="mt-6">
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Get the app
+            </h3>
+            <AppBadges />
+          </div>
         </div>
 
         <div>
