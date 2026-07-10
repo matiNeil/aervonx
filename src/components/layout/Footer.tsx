@@ -71,16 +71,24 @@ export function Footer() {
             commission when you book with our partners (such as airlines and
             Booking.com) — always at no extra cost to you.
           </p>
-          <div className="mt-3 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
+          <div className="mt-3 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
             <p className="text-xs text-slate-500">
               © {year} {siteConfig.legalName}. All rights reserved.
             </p>
-            <p className="text-xs text-slate-500">
-              Powered by{" "}
-              <span className="font-semibold text-slate-300">
-                <span className="text-red-500">Forge</span>StackX
-              </span>
-            </p>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              <Link href="/privacy" className="text-xs text-slate-500 transition-colors hover:text-accent-300">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-xs text-slate-500 transition-colors hover:text-accent-300">
+                Terms of Service
+              </Link>
+              <p className="text-xs text-slate-500">
+                Powered by{" "}
+                <span className="font-semibold text-slate-300">
+                  <span className="text-red-500">Forge</span>StackX
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
