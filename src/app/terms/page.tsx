@@ -30,12 +30,11 @@ export default function TermsPage() {
               What {siteConfig.name} is
             </h2>
             <p className="mt-3">
-              {siteConfig.name} is a travel comparison service. We search
-              and display fares and prices from airlines and partners (such
-              as Booking.com) so you can compare them. We are not an
-              airline, hotel, or travel agent, and we do not sell travel
-              services directly — every booking is completed and fulfilled
-              by the partner you&apos;re redirected to.
+              We search and display fares and prices from airlines and
+              partners (such as Booking.com) so you can compare them. We are
+              not an airline, hotel, or travel agent, and we do not sell
+              travel services directly — every booking is completed and
+              fulfilled by the partner you&apos;re redirected to.
             </p>
           </div>
 
@@ -58,9 +57,6 @@ export default function TermsPage() {
             </h2>
             <p className="mt-3">
               Searching and comparing on {siteConfig.name} is always free.
-              We may earn a commission from a partner when you complete a
-              booking through a link from our site — this is never added to
-              the price you pay.
             </p>
           </div>
 

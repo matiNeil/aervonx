@@ -7,7 +7,7 @@ export const faqs: Faq[] = [
   {
     question: "How does AervonX work?",
     answer:
-      "AervonX is a travel comparison service. Search once and we scan flights, hotels, holiday packages and airport transfers from airlines and partners like Booking.com, so you can compare prices in one place.",
+      "Search once and we scan flights, hotels, holiday packages and airport transfers from airlines and partners like Booking.com, so you can compare prices in one place.",
   },
   {
     question: "Do I book and pay directly on AervonX?",
@@ -21,8 +21,7 @@ export const faqs: Faq[] = [
   },
   {
     question: "Does AervonX charge a booking fee?",
-    answer:
-      "No. Searching and comparing on AervonX is always free. We may earn a small commission from the partner when you complete a booking — this is never added to the price you pay.",
+    answer: "No. Searching and comparing on AervonX is always free.",
   },
   {
     question: "I need to change or cancel my booking — who do I contact?",

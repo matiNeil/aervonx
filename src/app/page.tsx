@@ -208,10 +208,9 @@ export default async function HomePage() {
             How AervonX works
           </h2>
           <p className="mt-2 text-muted">
-            AervonX is a travel comparison service. We bring together fares and
-            prices from airlines and partners like Booking.com so you can find
-            the best deal — then send you to them to book. We earn a commission
-            on completed bookings, at no extra cost to you.
+            We bring together fares and prices from airlines and partners
+            like Booking.com so you can find the best deal — then send you
+            to them to book.
           </p>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-3">

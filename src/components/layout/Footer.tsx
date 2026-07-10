@@ -74,9 +74,8 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
           <p className="text-xs leading-relaxed text-slate-500">
-            {siteConfig.name} is a travel comparison service. We may earn a
-            commission when you book with our partners (such as airlines and
-            Booking.com) — always at no extra cost to you.
+            {siteConfig.name} works with trusted travel providers to bring you
+            competitive options and a seamless booking experience.
           </p>
           <div className="mt-3 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
             <p className="text-xs text-slate-500">
@@ -91,9 +90,14 @@ export function Footer() {
               </Link>
               <p className="text-xs text-slate-500">
                 Powered by{" "}
-                <span className="font-semibold text-slate-300">
+                <a
+                  href="https://www.forgestackx.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-slate-300 transition-colors hover:text-white"
+                >
                   <span className="text-red-500">Forge</span>StackX
-                </span>
+                </a>
               </p>
             </div>
           </div>
