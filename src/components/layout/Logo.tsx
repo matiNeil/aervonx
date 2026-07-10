@@ -11,7 +11,7 @@ export function Logo({
   if (tone === "light") {
     return (
       <span className={cn("group inline-flex items-center gap-2.5", className)}>
-        <span className="inline-block h-9 w-9 shrink-0 transition duration-300 group-hover:-rotate-6">
+        <span className="inline-block h-11 w-11 shrink-0 transition duration-300 group-hover:-rotate-6">
           <Image
             src="/brand/aervonx-mark-light.png"
             alt=""
@@ -21,7 +21,7 @@ export function Logo({
             priority
           />
         </span>
-        <span className="font-serif text-xl font-medium tracking-tight text-white">
+        <span className="font-serif text-2xl font-medium tracking-tight text-white">
           Aervon<span className="text-accent-400">X</span>
         </span>
       </span>
@@ -35,7 +35,7 @@ export function Logo({
         alt="AervonX"
         width={1327}
         height={394}
-        className="h-9 w-auto"
+        className="h-12 w-auto"
         priority
       />
     </span>

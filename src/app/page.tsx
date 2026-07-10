@@ -73,9 +73,10 @@ export default async function HomePage() {
               <span className="italic text-accent-300">one search.</span>
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-brand-200 sm:text-lg">
-              Compare cheap flights, hotels, holiday packages and airport
-              transfers from hundreds of trusted partners — and book in a few
-              taps.
+              Discover the world with AervonX. Book flights, premium stays,
+              curated holiday experiences, airport transfers and car rentals
+              through one seamless travel platform designed to take you
+              further.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-brand-200">
               <span className="inline-flex items-center gap-1.5">

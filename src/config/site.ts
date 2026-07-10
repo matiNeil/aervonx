@@ -18,7 +18,7 @@ export const siteConfig = {
   legalName: "AervonX Travel",
   tagline: "Compare cheap flights, hotels, holiday packages & airport transfers",
   description:
-    "AervonX helps you compare and book cheap flights, hotels, holiday packages and airport transfers from hundreds of airlines and travel partners — all in one place.",
+    "Discover the world with AervonX. Book flights, premium stays, curated holiday experiences, airport transfers and car rentals through one seamless travel platform designed to take you further.",
   // Used for metadataBase / canonical URLs. Update to the live domain.
   url: "https://aervonx.com",
   contact: {
