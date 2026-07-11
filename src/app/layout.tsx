@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
+import Script from "next/script";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -79,6 +80,23 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <Script
+            id="travelpayouts-drive"
+            strategy="afterInteractive"
+            data-noptimize="1"
+            data-cfasync="false"
+            data-wpfc-render="false"
+            data-no-defer="1"
+            {...{ nowprocket: "", "seraph-accel-crit": "1" }}
+            dangerouslySetInnerHTML={{
+              __html: `(function () {
+                var script = document.createElement("script");
+                script.async = 1;
+                script.src = "https://tp-em.com/NTQ5MDYz.js?t=549063";
+                document.head.appendChild(script);
+              })();`,
+            }}
+          />
         </body>
       </html>
     </ClerkProvider>
